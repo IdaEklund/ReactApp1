@@ -1,0 +1,43 @@
+aside {
+  width: 30%;
+  height: 100vh;
+  border-left: 1px solid black;
+  padding-top: 5em;
+  background-color: lightgrey;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SideNav {
+  width: 7em;
+  height: 2em;
+  background-color: white;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border: 1px solid black;
+}
+
+/*Lite hover-effekt.*/
+.SideNav:hover {
+  transition: transform 1s ease;
+  transform: scale(1.1);
+}
+
+.SideNav a {
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+/*På små skärmar tar side-naven upp mer plats av skärmen.*/
+@media (max-width: 428px) {
+  aside {
+    width: 50%;
+  }
+}

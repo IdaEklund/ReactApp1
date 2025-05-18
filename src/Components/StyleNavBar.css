@@ -1,0 +1,112 @@
+.NavSection {
+  width: 100%;
+  height: 7em;
+  background-color: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+
+.NavBar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavBox {
+  width: 10em;
+  height: 3em;
+  margin: 10px;
+  background-color: rgb(155, 165, 165);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  border: 1px solid black;
+}
+
+.NavBox a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: large;
+}
+
+/*Lite "hover"-effekt när man hovrar över länkarna.*/
+.NavBox:hover {
+  color: rgb(91, 89, 89);
+  transition: transform 1s ease;
+  transform: scale(1.1);
+}
+
+/*"Hamburger"-menyn syns inte på stor skärm.*/
+.HamburgerBar {
+  display: none;
+}
+
+.HamburgerBar button {
+  width: 7em;
+  height: 7em;
+  background-color: rgb(155, 165, 165);
+  border: 1px solid black;
+  border-radius: 1em;
+  position: relative;
+}
+
+.NavDropdown {
+  position: absolute;
+  margin-top: 5.8em;
+  border-radius: 1em;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+/*Den här klassen läggs på "NavDropdown" när den togglas 
+till att inte synas.*/
+.hidden {
+  display: none;
+}
+
+.NavBox2 {
+  width: 7em;
+  height: 2.5em;
+  background-color: rgb(155, 165, 165);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.NavBox2 a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 428px) {
+  /*Navbaren från den stora skärmen syns 
+  inte vid liten skärm.*/
+  .NavBar {
+    display: none;
+  }
+
+  /*Hamburgerbaren syns istället då.*/
+  .HamburgerBar {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    align-self: center;
+    margin-left: 2em;
+  }
+}
